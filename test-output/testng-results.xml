@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" total="6" passed="6">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Default suite" duration-ms="74324" started-at="2020-03-15T20:02:54Z" finished-at="2020-03-15T20:04:09Z">
+    <groups>
+    </groups>
+    <test name="Default test" duration-ms="74324" started-at="2020-03-15T20:02:54Z" finished-at="2020-03-15T20:04:09Z">
+      <class name="com.qa.hubspot.tests.ContactsPageTest">
+        <test-method status="PASS" signature="SetUp()[pri:0, instance:com.qa.hubspot.tests.ContactsPageTest@66d33a]" name="SetUp" is-config="true" duration-ms="20810" started-at="2020-03-16T01:32:54Z" finished-at="2020-03-16T01:33:15Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- SetUp -->
+        <test-method status="PASS" signature="verifyContactPageTitle()[pri:0, instance:com.qa.hubspot.tests.ContactsPageTest@66d33a]" name="verifyContactPageTitle" duration-ms="47" started-at="2020-03-16T01:33:15Z" finished-at="2020-03-16T01:33:15Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyContactPageTitle -->
+        <test-method status="PASS" signature="verifyContactPageHeader()[pri:0, instance:com.qa.hubspot.tests.ContactsPageTest@66d33a]" name="verifyContactPageHeader" duration-ms="40" started-at="2020-03-16T01:33:15Z" finished-at="2020-03-16T01:33:15Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyContactPageHeader -->
+        <test-method status="PASS" signature="verifyCreateContact(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.qa.hubspot.tests.ContactsPageTest@66d33a]" name="verifyCreateContact" duration-ms="14339" started-at="2020-03-16T01:33:16Z" data-provider="getContactsData" finished-at="2020-03-16T01:33:31Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[vasant.verma@arconnet.com]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Vasant]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[Verma]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[SDET]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[123456.0]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyCreateContact -->
+        <test-method status="PASS" signature="verifyCreateContact(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.qa.hubspot.tests.ContactsPageTest@66d33a]" name="verifyCreateContact" duration-ms="13861" started-at="2020-03-16T01:33:31Z" data-provider="getContactsData" finished-at="2020-03-16T01:33:45Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[lawrence.rodrigues@arconnet.com]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Lawrence]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[Rodrigues]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[Senior SDET]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[123456.0]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyCreateContact -->
+        <test-method status="PASS" signature="verifyCreateContact(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.qa.hubspot.tests.ContactsPageTest@66d33a]" name="verifyCreateContact" duration-ms="11276" started-at="2020-03-16T01:33:45Z" data-provider="getContactsData" finished-at="2020-03-16T01:33:56Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[rohan.barnwal@arconnet.com]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Rohan]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[Barnwal]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[Junior SDET]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[123456.0]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyCreateContact -->
+        <test-method status="PASS" signature="verifyCreateContact(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.qa.hubspot.tests.ContactsPageTest@66d33a]" name="verifyCreateContact" duration-ms="11976" started-at="2020-03-16T01:33:56Z" data-provider="getContactsData" finished-at="2020-03-16T01:34:08Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[bhushan.sawant@arconnet.com]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Bhushan]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[Sawant]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[Junior SDET]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[123456.0]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyCreateContact -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.qa.hubspot.tests.ContactsPageTest@66d33a]" name="tearDown" is-config="true" duration-ms="790" started-at="2020-03-16T01:34:08Z" finished-at="2020-03-16T01:34:09Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- com.qa.hubspot.tests.ContactsPageTest -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>
