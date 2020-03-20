@@ -1,15 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
-  <test name="Default test(failed)">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Hubspot App Sanity Test Suite]">
+  <listeners>
+    <listener class-name="com.qa.hubspot.listeners.TesultsListener"/>
+  </listeners>
+  <test name="Hubspot Sanity Testcases- chrome(failed)">
     <classes>
-      <class name="com.qa.hubspot.tests.ContactsPageTest">
+      <class name="com.qa.hubspot.tests.LoginPageTest">
         <methods>
-          <include name="verifyCreateContact" invocation-numbers="3"/>
-          <include name="SetUp"/>
+          <include name="verifyLoginPageTitleTest"/>
+          <include name="setUP"/>
           <include name="tearDown"/>
         </methods>
-      </class> <!-- com.qa.hubspot.tests.ContactsPageTest -->
+      </class> <!-- com.qa.hubspot.tests.LoginPageTest -->
     </classes>
-  </test> <!-- Default test(failed) -->
-</suite> <!-- Failed suite [Default suite] -->
+  </test> <!-- Hubspot Sanity Testcases- chrome(failed) -->
+</suite> <!-- Failed suite [Hubspot App Sanity Test Suite] -->

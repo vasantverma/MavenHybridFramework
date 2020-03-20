@@ -1,15 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Hubspot App Sanity Test Suite]">
-  <test name="Hubspot Sanity Testcases(failed)">
+  <listeners>
+    <listener class-name="com.qa.hubspot.listeners.TesultsListener"/>
+  </listeners>
+  <test name="Hubspot Sanity Testcases- chrome(failed)">
     <classes>
       <class name="com.qa.hubspot.tests.LoginPageTest">
         <methods>
+          <include name="verifyLoginPageTitleTest"/>
           <include name="setUP"/>
-          <include name="verifyloginTest"/>
           <include name="tearDown"/>
         </methods>
       </class> <!-- com.qa.hubspot.tests.LoginPageTest -->
     </classes>
-  </test> <!-- Hubspot Sanity Testcases(failed) -->
+  </test> <!-- Hubspot Sanity Testcases- chrome(failed) -->
 </suite> <!-- Failed suite [Hubspot App Sanity Test Suite] -->

@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>Hubspot Sanity Testcases- chrome</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>11/0/0</td>
+<td>Tests passed/Failed/Skipped:</td><td>10/1/0</td>
 </tr><tr>
-<td>Started on:</td><td>Sun Mar 08 12:04:38 IST 2020</td>
+<td>Started on:</td><td>Fri Mar 20 15:51:10 IST 2020</td>
 </tr>
-<tr><td>Total time:</td><td>28 seconds (28831 ms)</td>
+<tr><td>Total time:</td><td>45 seconds (45602 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -67,6 +67,68 @@ function toggleAllBoxes() {
 </tr>
 </table><p/>
 <small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table width='100%' border='1' class='invocation-failed'>
+<tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='com.qa.hubspot.tests.LoginPageTest.verifyLoginPageTitleTest()'><b>verifyLoginPageTitleTest</b><br>Test class: com.qa.hubspot.tests.LoginPageTest</td>
+<td><div><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for title to be &quot;HubSpot Login1&quot;. Current title: &quot;HubSpot Login&quot; (tried for 20 second(s) with 500 milliseconds interval)
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;LAPTOP-1UNI7991&apos;, ip: &apos;192.168.127.1&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_231&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 80.0.3987.149, chrome: {chromedriverVersion: 80.0.3987.106 (f68069574609..., userDataDir: C:\Users\VINAYV~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:52780}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: be24e072bded8c1973f347f48213c76d
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:95)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:272)
+	at com.qa.hubspot.util.ElementActions.waitForPageTitle(ElementActions.java:69)
+	at com.qa.hubspot.util.ElementActions.doGetPageTitle(ElementActions.java:52)
+	at com.qa.hubspot.pages.LoginPage.getLoginPageTitle(LoginPage.java:43)
+	at com.qa.hubspot.tests.LoginPageTest.verifyLoginPageTitleTest(LoginPageTest.java:38)
+... Removed 24 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1563053805", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1563053805'><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for title to be &quot;HubSpot Login1&quot;. Current title: &quot;HubSpot Login&quot; (tried for 20 second(s) with 500 milliseconds interval)
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;LAPTOP-1UNI7991&apos;, ip: &apos;192.168.127.1&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_231&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 80.0.3987.149, chrome: {chromedriverVersion: 80.0.3987.106 (f68069574609..., userDataDir: C:\Users\VINAYV~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:52780}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: be24e072bded8c1973f347f48213c76d
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:95)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:272)
+	at com.qa.hubspot.util.ElementActions.waitForPageTitle(ElementActions.java:69)
+	at com.qa.hubspot.util.ElementActions.doGetPageTitle(ElementActions.java:52)
+	at com.qa.hubspot.pages.LoginPage.getLoginPageTitle(LoginPage.java:43)
+	at com.qa.hubspot.tests.LoginPageTest.verifyLoginPageTitleTest(LoginPageTest.java:38)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:85)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:663)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:849)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1157)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:124)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:108)
+	at org.testng.TestRunner.privateRun(TestRunner.java:771)
+	at org.testng.TestRunner.run(TestRunner.java:621)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:357)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:352)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:310)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:259)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1200)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1125)
+	at org.testng.TestNG.run(TestNG.java:1033)
+	at org.testng.remote.RemoteTestNG.run(RemoteTestNG.java:111)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:204)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:175)
+</pre></div></td>
+<td>20</td>
+<td>com.qa.hubspot.tests.LoginPageTest@4148db48</td></tr>
+</table><p>
 <table width='100%' border='1' class='invocation-passed'>
 <tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
 <tr><td><b>Test method</b></td>
@@ -78,57 +140,52 @@ function toggleAllBoxes() {
 <td title='com.qa.hubspot.tests.LoginPageTest.verifyCopyRightInfoTest()'><b>verifyCopyRightInfoTest</b><br>Test class: com.qa.hubspot.tests.LoginPageTest</td>
 <td></td>
 <td>0</td>
-<td>com.qa.hubspot.tests.LoginPageTest@1888ff2c</td></tr>
+<td>com.qa.hubspot.tests.LoginPageTest@4148db48</td></tr>
 <tr>
 <td title='com.qa.hubspot.tests.LoginPageTest.verifyDontHaveAccountLabelTest()'><b>verifyDontHaveAccountLabelTest</b><br>Test class: com.qa.hubspot.tests.LoginPageTest</td>
 <td></td>
 <td>0</td>
-<td>com.qa.hubspot.tests.LoginPageTest@1888ff2c</td></tr>
+<td>com.qa.hubspot.tests.LoginPageTest@4148db48</td></tr>
 <tr>
 <td title='com.qa.hubspot.tests.LoginPageTest.verifyForgotPasswordLinkTest()'><b>verifyForgotPasswordLinkTest</b><br>Test class: com.qa.hubspot.tests.LoginPageTest</td>
 <td></td>
 <td>0</td>
-<td>com.qa.hubspot.tests.LoginPageTest@1888ff2c</td></tr>
+<td>com.qa.hubspot.tests.LoginPageTest@4148db48</td></tr>
 <tr>
 <td title='com.qa.hubspot.tests.LoginPageTest.verifyHidePasswordLinkTest()'><b>verifyHidePasswordLinkTest</b><br>Test class: com.qa.hubspot.tests.LoginPageTest</td>
 <td></td>
 <td>0</td>
-<td>com.qa.hubspot.tests.LoginPageTest@1888ff2c</td></tr>
-<tr>
-<td title='com.qa.hubspot.tests.LoginPageTest.verifyLoginPageTitleTest()'><b>verifyLoginPageTitleTest</b><br>Test class: com.qa.hubspot.tests.LoginPageTest</td>
-<td></td>
-<td>0</td>
-<td>com.qa.hubspot.tests.LoginPageTest@1888ff2c</td></tr>
+<td>com.qa.hubspot.tests.LoginPageTest@4148db48</td></tr>
 <tr>
 <td title='com.qa.hubspot.tests.LoginPageTest.verifyPasswordIsMasked()'><b>verifyPasswordIsMasked</b><br>Test class: com.qa.hubspot.tests.LoginPageTest</td>
 <td></td>
 <td>0</td>
-<td>com.qa.hubspot.tests.LoginPageTest@1888ff2c</td></tr>
+<td>com.qa.hubspot.tests.LoginPageTest@4148db48</td></tr>
 <tr>
 <td title='com.qa.hubspot.tests.LoginPageTest.verifySSOLinkTest()'><b>verifySSOLinkTest</b><br>Test class: com.qa.hubspot.tests.LoginPageTest</td>
 <td></td>
 <td>0</td>
-<td>com.qa.hubspot.tests.LoginPageTest@1888ff2c</td></tr>
+<td>com.qa.hubspot.tests.LoginPageTest@4148db48</td></tr>
 <tr>
 <td title='com.qa.hubspot.tests.LoginPageTest.verifyShowPasswordLinkTest()'><b>verifyShowPasswordLinkTest</b><br>Test class: com.qa.hubspot.tests.LoginPageTest</td>
 <td></td>
 <td>0</td>
-<td>com.qa.hubspot.tests.LoginPageTest@1888ff2c</td></tr>
+<td>com.qa.hubspot.tests.LoginPageTest@4148db48</td></tr>
 <tr>
 <td title='com.qa.hubspot.tests.LoginPageTest.verifySignInWithGoogleLinkTest()'><b>verifySignInWithGoogleLinkTest</b><br>Test class: com.qa.hubspot.tests.LoginPageTest</td>
 <td></td>
 <td>0</td>
-<td>com.qa.hubspot.tests.LoginPageTest@1888ff2c</td></tr>
+<td>com.qa.hubspot.tests.LoginPageTest@4148db48</td></tr>
 <tr>
 <td title='com.qa.hubspot.tests.LoginPageTest.verifySignUpLinkTest()'><b>verifySignUpLinkTest</b><br>Test class: com.qa.hubspot.tests.LoginPageTest</td>
 <td></td>
-<td>0</td>
-<td>com.qa.hubspot.tests.LoginPageTest@1888ff2c</td></tr>
+<td>5</td>
+<td>com.qa.hubspot.tests.LoginPageTest@4148db48</td></tr>
 <tr>
 <td title='com.qa.hubspot.tests.LoginPageTest.verifyloginTest()'><b>verifyloginTest</b><br>Test class: com.qa.hubspot.tests.LoginPageTest</td>
 <td></td>
-<td>11</td>
-<td>com.qa.hubspot.tests.LoginPageTest@1888ff2c</td></tr>
+<td>5</td>
+<td>com.qa.hubspot.tests.LoginPageTest@4148db48</td></tr>
 </table><p>
 </body>
 </html>

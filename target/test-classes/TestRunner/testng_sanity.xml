@@ -1,16 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="Hubspot App Sanity Test Suite" thread-count="2" parallel="tests">
+<suite name="Hubspot App Sanity Test Suite">
+	<listeners>
+		<!-- <listener class-name="com.qa.hubspot.listeners.ExtentReportListener" 
+			/> -->
+		<!-- <listener class-name="com.qa.hubspot.listeners.PDFListener" /> -->
+		<listener
+			class-name="com.qa.hubspot.listeners.TesultsListener" />
+
+
+
+	</listeners>
 	<test name="Hubspot Sanity Testcases- chrome">
-	<parameter name="browser" value="chrome" />
 		<classes>
 			<class name="com.qa.hubspot.tests.LoginPageTest"></class>
 		</classes>
 	</test>
-	<test name="Hubspot Sanity Testcases- firefox">
-	<parameter name="browser" value="firefox" />
-		<classes>
-			<class name="com.qa.hubspot.tests.LoginPageTest"></class>
-		</classes>
-	</test>
+
 </suite>

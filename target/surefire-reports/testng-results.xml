@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="0" total="11" passed="11">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Hubspot App Sanity Test Suite" duration-ms="29192" started-at="2020-03-20T10:24:37Z" finished-at="2020-03-20T10:25:06Z">
+    <groups>
+    </groups>
+    <test name="Hubspot Sanity Testcases- chrome" duration-ms="29192" started-at="2020-03-20T10:24:37Z" finished-at="2020-03-20T10:25:06Z">
+      <class name="com.qa.hubspot.tests.LoginPageTest">
+        <test-method status="PASS" signature="setUP()[pri:0, instance:com.qa.hubspot.tests.LoginPageTest@726e5805]" name="setUP" is-config="true" duration-ms="12511" started-at="2020-03-20T10:24:37Z" finished-at="2020-03-20T10:24:49Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUP -->
+        <test-method status="PASS" signature="verifySignUpLinkTest()[pri:1, instance:com.qa.hubspot.tests.LoginPageTest@726e5805]" name="verifySignUpLinkTest" duration-ms="6853" started-at="2020-03-20T10:24:49Z" finished-at="2020-03-20T10:24:56Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifySignUpLinkTest -->
+        <test-method status="PASS" signature="verifyLoginPageTitleTest()[pri:2, instance:com.qa.hubspot.tests.LoginPageTest@726e5805]" name="verifyLoginPageTitleTest" duration-ms="53" started-at="2020-03-20T10:24:56Z" finished-at="2020-03-20T10:24:57Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyLoginPageTitleTest -->
+        <test-method status="PASS" signature="verifyDontHaveAccountLabelTest()[pri:3, instance:com.qa.hubspot.tests.LoginPageTest@726e5805]" name="verifyDontHaveAccountLabelTest" duration-ms="111" started-at="2020-03-20T10:24:57Z" finished-at="2020-03-20T10:24:57Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyDontHaveAccountLabelTest -->
+        <test-method status="PASS" signature="verifyForgotPasswordLinkTest()[pri:4, instance:com.qa.hubspot.tests.LoginPageTest@726e5805]" name="verifyForgotPasswordLinkTest" duration-ms="131" started-at="2020-03-20T10:24:57Z" finished-at="2020-03-20T10:24:57Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyForgotPasswordLinkTest -->
+        <test-method status="PASS" signature="verifyPasswordIsMasked()[pri:5, instance:com.qa.hubspot.tests.LoginPageTest@726e5805]" name="verifyPasswordIsMasked" duration-ms="62" started-at="2020-03-20T10:24:57Z" finished-at="2020-03-20T10:24:57Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyPasswordIsMasked -->
+        <test-method status="PASS" signature="verifySignInWithGoogleLinkTest()[pri:6, instance:com.qa.hubspot.tests.LoginPageTest@726e5805]" name="verifySignInWithGoogleLinkTest" duration-ms="71" started-at="2020-03-20T10:24:57Z" finished-at="2020-03-20T10:24:57Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifySignInWithGoogleLinkTest -->
+        <test-method status="PASS" signature="verifySSOLinkTest()[pri:7, instance:com.qa.hubspot.tests.LoginPageTest@726e5805]" name="verifySSOLinkTest" duration-ms="72" started-at="2020-03-20T10:24:57Z" finished-at="2020-03-20T10:24:57Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifySSOLinkTest -->
+        <test-method status="PASS" signature="verifyShowPasswordLinkTest()[pri:8, instance:com.qa.hubspot.tests.LoginPageTest@726e5805]" name="verifyShowPasswordLinkTest" duration-ms="417" started-at="2020-03-20T10:24:57Z" finished-at="2020-03-20T10:24:57Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyShowPasswordLinkTest -->
+        <test-method status="PASS" signature="verifyHidePasswordLinkTest()[pri:9, instance:com.qa.hubspot.tests.LoginPageTest@726e5805]" name="verifyHidePasswordLinkTest" duration-ms="184" started-at="2020-03-20T10:24:57Z" finished-at="2020-03-20T10:24:58Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyHidePasswordLinkTest -->
+        <test-method status="PASS" signature="verifyCopyRightInfoTest()[pri:10, instance:com.qa.hubspot.tests.LoginPageTest@726e5805]" name="verifyCopyRightInfoTest" duration-ms="57" started-at="2020-03-20T10:24:58Z" finished-at="2020-03-20T10:24:58Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyCopyRightInfoTest -->
+        <test-method status="PASS" signature="verifyloginTest()[pri:11, instance:com.qa.hubspot.tests.LoginPageTest@726e5805]" name="verifyloginTest" duration-ms="7408" started-at="2020-03-20T10:24:58Z" finished-at="2020-03-20T10:25:05Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyloginTest -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.qa.hubspot.tests.LoginPageTest@726e5805]" name="tearDown" is-config="true" duration-ms="696" started-at="2020-03-20T10:25:05Z" finished-at="2020-03-20T10:25:06Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- com.qa.hubspot.tests.LoginPageTest -->
+    </test> <!-- Hubspot Sanity Testcases- chrome -->
+  </suite> <!-- Hubspot App Sanity Test Suite -->
+</testng-results>

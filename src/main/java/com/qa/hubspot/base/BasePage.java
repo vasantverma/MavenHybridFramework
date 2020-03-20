@@ -1,107 +1,125 @@
 package com.qa.hubspot.base;
 
+import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.Properties;
-import java.util.concurrent.TimeUnit;
-
+import org.apache.commons.io.FileUtils;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
-import org.openqa.selenium.firefox.FirefoxOptions;
-import org.openqa.selenium.ie.InternetExplorerDriver;
 import org.openqa.selenium.safari.SafariDriver;
-
-import com.qa.hubspot.util.AppConstants;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 
-public class BasePage 
-{
-	  public  WebDriver driver;
-	  public Properties prop;
-	   /**
-	    * This is method is used to initialize the WebDriver on the basis of browser name
-	    * @param prop
-	    * @return WebDriver instance
-	    */
-	   public WebDriver init_driver(Properties prop)
-       {
-    	   String browserName=prop.getProperty("browser");
-    	   boolean isHeadless=Boolean.parseBoolean(prop.getProperty("headless"));
-    	 if(browserName.equalsIgnoreCase("chrome"))
-    	 {
-    		 if(isHeadless)
-    		 {
-    			 ChromeOptions co=new ChromeOptions();
-    			 co.addArguments("--headless");
-    			 WebDriverManager.chromedriver().setup();
-       		     driver=new ChromeDriver(co);
-    		 }
-    		 else
-    		 {
-    		 WebDriverManager.chromedriver().setup();
-    		  driver=new ChromeDriver();
-    		 }
-    	 }
-    	 else if(browserName.equalsIgnoreCase("firefox"))
-    	 {
-    		 if(isHeadless)
-    		 {
-    			 FirefoxOptions fo=new FirefoxOptions();
-    			 WebDriverManager.firefoxdriver().setup();
-       		     driver=new FirefoxDriver(fo);
-    		 }
-    		 else
-    		 {
-    			 WebDriverManager.firefoxdriver().setup();
-       		     driver=new FirefoxDriver();
-    		 }
-    	 }
-    	 else if(browserName.equalsIgnoreCase("safari")) 
-    	 {
-    		 WebDriverManager.getInstance(SafariDriver.class).setup();
-    		 driver=new SafariDriver();
-    	 }
-    	 else if(browserName.equalsIgnoreCase("ie"))
-    	 {
-    		 WebDriverManager.iedriver().setup();
-   		     driver=new InternetExplorerDriver();
-    	 }
-    	 else
-    	 {
-    		 System.out.println(browserName+" was not found.Please specify the proper browser name.");
-    	 }
-    	 driver.get(prop.getProperty("url"));
-    	 driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
-    	 driver.manage().window().maximize();
-    	 driver.manage().deleteAllCookies();
-    	 return driver;
-       }
-       /**
-        * This method is used to initialize the Properties
-        * @return an  instance of Properties
-        */
-       public Properties init_prop()
-       {
-    	   
-    	   prop=new Properties();
-    	   try 
-    	   {
-    		   FileInputStream ip=new FileInputStream(AppConstants.CONFIG_FILE_PATH);
-			   prop.load(ip);
-		    } 
-    	   catch (FileNotFoundException e) 
-    	   {
-			System.out.println("config.properties file was not found");
+public class BasePage {
+
+	public WebDriver driver;
+	public Properties prop;
+	public OptionsManager optionsManager;
+
+	public static ThreadLocal<WebDriver> tlDriver = new ThreadLocal<WebDriver>();
+
+	public static synchronized WebDriver getDriver() {
+		return tlDriver.get();
+	}
+
+	/**
+	 * This method is used to initialize the WebDriver on the basis of
+	 * browserName
+	 * 
+	 * @param browserName
+	 * @return this method will return driver instance
+	 */
+	public WebDriver init_driver(Properties prop) {
+		String browserName = prop.getProperty("browser");
+		optionsManager = new OptionsManager(prop);
+
+		if (browserName.equalsIgnoreCase("chrome")) {
+			WebDriverManager.chromedriver().setup();
+			tlDriver.set(new ChromeDriver(optionsManager.getChromeOptions()));
+		} else if (browserName.equalsIgnoreCase("firefox")) {
+			WebDriverManager.firefoxdriver().setup();
+			tlDriver.set(new FirefoxDriver(optionsManager.getFirefoxOptions()));
+		} else if (browserName.equalsIgnoreCase("safari")) {
+			WebDriverManager.getInstance(SafariDriver.class).setup();
+			tlDriver.set(new SafariDriver());
+		} else {
+			System.out.println(browserName + " is not found, please pass the right browser Name");
+		}
+
+		getDriver().manage().window().maximize();
+		getDriver().manage().deleteAllCookies();
+		getDriver().get(prop.getProperty("url"));
+		// driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+		return getDriver();
+
+	}
+
+	/**
+	 * 
+	 * @return this method returns properties - prop available in
+	 *         config.proerties file
+	 */
+	public Properties init_prop() {
+		prop = new Properties();
+		String path = null;
+		String env = null;
+
+		try {
+			env = System.getProperty("env");
+			if (env == null) {
+				path = "./src/main/java/com/qa/hubspot/config/config.properties";
+			} 
+			else {
+				switch (env) {
+				case "qa":
+					path = "./src/main/java/com/qa/hubspot/config/config.properties";
+					break;
+				case "stg":
+					path = "./src/main/java/com/qa/hubspot/config/config.stg.properties";
+					break;
+				case "prod":
+					path = "./src/main/java/com/qa/hubspot/config/config.properties";
+					break;
+				default:
+					System.out.println("no env is passed");
+					break;
+				}
+			}
+
+			FileInputStream ip = new FileInputStream(path);
+			prop.load(ip);
+
+		} catch (FileNotFoundException e) {
 			e.printStackTrace();
-		   }
-    	   catch (IOException e) {
-			System.out.println("Exception occurred while loading config.properties file");
+			System.out.println("config file is not foubd.....");
+		} catch (IOException e) {
 			e.printStackTrace();
-		   }
-    	   return prop;
-       }
+		}
+
+		return prop;
+	}
+
+	/**
+	 * take screenshot util
+	 */
+
+	public String getScreenshot() {
+		File src = ((TakesScreenshot) getDriver()).getScreenshotAs(OutputType.FILE);
+		String path = System.getProperty("user.dir") + "/screenshots/" + System.currentTimeMillis() + ".png";
+		File destination = new File(path);
+
+		try {
+			FileUtils.copyFile(src, destination);
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+
+		return path;
+	}
+
 }
