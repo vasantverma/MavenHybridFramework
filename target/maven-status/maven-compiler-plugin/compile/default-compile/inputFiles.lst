@@ -9,5 +9,6 @@ D:\Vasant\EclipseWorkspace\MavenHybridFramework\src\main\java\com\qa\hubspot\bas
 D:\Vasant\EclipseWorkspace\MavenHybridFramework\src\main\java\com\qa\hubspot\util\AppConstants.java
 D:\Vasant\EclipseWorkspace\MavenHybridFramework\src\main\java\com\qa\hubspot\listeners\TestAllureListener.java
 D:\Vasant\EclipseWorkspace\MavenHybridFramework\src\main\java\com\qa\hubspot\pages\LoginPage.java
+D:\Vasant\EclipseWorkspace\MavenHybridFramework\src\main\java\com\qa\hubspot\listeners\ScreenshotListener.java
 D:\Vasant\EclipseWorkspace\MavenHybridFramework\src\main\java\com\qa\hubspot\listeners\TesultsListener.java
 D:\Vasant\EclipseWorkspace\MavenHybridFramework\src\main\java\com\qa\hubspot\util\ExcelUtil.java

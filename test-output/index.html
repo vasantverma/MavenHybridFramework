@@ -23,7 +23,7 @@
     <div class="top-banner-root">
       <span class="top-banner-title-font">Test results</span>
       <br/>
-      <span class="top-banner-font-1">1 suite, 1 failed test</span>
+      <span class="top-banner-font-1">1 suite</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -37,7 +37,7 @@
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
             <a href="#" class="navigator-link" panel-name="suite-Hubspot_App_Sanity_Test_Suite">
-              <span class="suite-name border-failed">Hubspot App Sanity Test Suite</span>
+              <span class="suite-name border-passed">Hubspot App Sanity Test Suite</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -90,21 +90,7 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">11 methods, 1 failed,   10 passed</span>
-                  </li>
-                  <li>
-                    <span class="method-list-title failed">Failed methods</span>
-                    <span class="show-or-hide-methods failed">
-                      <a href="#" panel-name="suite-Hubspot_App_Sanity_Test_Suite" class="hide-methods failed suite-Hubspot_App_Sanity_Test_Suite"> (hide)</a> <!-- hide-methods failed suite-Hubspot_App_Sanity_Test_Suite -->
-                      <a href="#" panel-name="suite-Hubspot_App_Sanity_Test_Suite" class="show-methods failed suite-Hubspot_App_Sanity_Test_Suite"> (show)</a> <!-- show-methods failed suite-Hubspot_App_Sanity_Test_Suite -->
-                    </span>
-                    <div class="method-list-content failed suite-Hubspot_App_Sanity_Test_Suite">
-                      <span>
-                        <img width="3%" src="failed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Hubspot_App_Sanity_Test_Suite" title="com.qa.hubspot.tests.LoginPageTest" hash-for-method="verifyLoginPageTitleTest">verifyLoginPageTitleTest</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                    </div> <!-- method-list-content failed suite-Hubspot_App_Sanity_Test_Suite -->
+                    <span class="method-stats">11 methods,   11 passed</span>
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -131,6 +117,11 @@
                       <span>
                         <img width="3%" src="passed.png"/>
                         <a href="#" class="method navigator-link" panel-name="suite-Hubspot_App_Sanity_Test_Suite" title="com.qa.hubspot.tests.LoginPageTest" hash-for-method="verifyHidePasswordLinkTest">verifyHidePasswordLinkTest</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Hubspot_App_Sanity_Test_Suite" title="com.qa.hubspot.tests.LoginPageTest" hash-for-method="verifyLoginPageTitleTest">verifyLoginPageTitleTest</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
@@ -175,35 +166,6 @@
     <div class="wrapper">
       <div class="main-panel-root">
         <div panel-name="suite-Hubspot_App_Sanity_Test_Suite" class="panel Hubspot_App_Sanity_Test_Suite">
-          <div class="suite-Hubspot_App_Sanity_Test_Suite-class-failed">
-            <div class="main-panel-header rounded-window-top">
-              <img src="failed.png"/>
-              <span class="class-name">com.qa.hubspot.tests.LoginPageTest</span>
-            </div> <!-- main-panel-header rounded-window-top -->
-            <div class="main-panel-content rounded-window-bottom">
-              <div class="method">
-                <div class="method-content">
-                  <a name="verifyLoginPageTitleTest">
-                  </a> <!-- verifyLoginPageTitleTest -->
-                  <span class="method-name">verifyLoginPageTitleTest</span>
-                  <div class="stack-trace">org.openqa.selenium.TimeoutException: Expected condition failed: waiting for title to be &quot;HubSpot Login1&quot;. Current title: &quot;HubSpot Login&quot; (tried for 20 second(s) with 500 milliseconds interval)
-Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
-System info: host: &apos;LAPTOP-1UNI7991&apos;, ip: &apos;192.168.127.1&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_231&apos;
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 80.0.3987.149, chrome: {chromedriverVersion: 80.0.3987.106 (f68069574609..., userDataDir: C:\Users\VINAYV~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:52780}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
-Session ID: be24e072bded8c1973f347f48213c76d
-	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:95)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:272)
-	at com.qa.hubspot.util.ElementActions.waitForPageTitle(ElementActions.java:69)
-	at com.qa.hubspot.util.ElementActions.doGetPageTitle(ElementActions.java:52)
-	at com.qa.hubspot.pages.LoginPage.getLoginPageTitle(LoginPage.java:43)
-	at com.qa.hubspot.tests.LoginPageTest.verifyLoginPageTitleTest(LoginPageTest.java:38)
-... Removed 24 stack frames
-</div> <!-- stack-trace -->
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-            </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-Hubspot_App_Sanity_Test_Suite-class-failed -->
           <div class="suite-Hubspot_App_Sanity_Test_Suite-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
@@ -236,6 +198,13 @@ Session ID: be24e072bded8c1973f347f48213c76d
                   <a name="verifyHidePasswordLinkTest">
                   </a> <!-- verifyHidePasswordLinkTest -->
                   <span class="method-name">verifyHidePasswordLinkTest</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="verifyLoginPageTitleTest">
+                  </a> <!-- verifyLoginPageTitleTest -->
+                  <span class="method-name">verifyLoginPageTitleTest</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
               <div class="method">
@@ -294,12 +263,13 @@ Session ID: be24e072bded8c1973f347f48213c76d
 &lt;suite guice-stage=&quot;DEVELOPMENT&quot; name=&quot;Hubspot App Sanity Test Suite&quot;&gt;
   &lt;listeners&gt;
     &lt;listener class-name=&quot;com.qa.hubspot.listeners.TesultsListener&quot;/&gt;
+    &lt;listener class-name=&quot;com.qa.hubspot.listeners.TestAllureListener&quot;/&gt;
   &lt;/listeners&gt;
-  &lt;test name=&quot;Hubspot Sanity Testcases- chrome&quot;&gt;
+  &lt;test name=&quot;Hubspot Sanity Testcases&quot;&gt;
     &lt;classes&gt;
       &lt;class name=&quot;com.qa.hubspot.tests.LoginPageTest&quot;/&gt;
     &lt;/classes&gt;
-  &lt;/test&gt; &lt;!-- Hubspot Sanity Testcases- chrome --&gt;
+  &lt;/test&gt; &lt;!-- Hubspot Sanity Testcases --&gt;
 &lt;/suite&gt; &lt;!-- Hubspot App Sanity Test Suite --&gt;
             </pre>
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -311,7 +281,7 @@ Session ID: be24e072bded8c1973f347f48213c76d
           <div class="main-panel-content rounded-window-bottom">
             <ul>
               <li>
-                <span class="test-name">Hubspot Sanity Testcases- chrome (1 class)</span>
+                <span class="test-name">Hubspot Sanity Testcases (1 class)</span>
               </li>
             </ul>
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -339,54 +309,54 @@ data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
 data.addRows(11);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'verifyLoginPageTitleTest')
+data.setCell(0, 1, 'verifyloginTest')
 data.setCell(0, 2, 'com.qa.hubspot.tests.LoginPageTest')
-data.setCell(0, 3, 20085);
+data.setCell(0, 3, 6089);
 data.setCell(1, 0, 1)
 data.setCell(1, 1, 'verifySignUpLinkTest')
 data.setCell(1, 2, 'com.qa.hubspot.tests.LoginPageTest')
-data.setCell(1, 3, 5795);
+data.setCell(1, 3, 5031);
 data.setCell(2, 0, 2)
-data.setCell(2, 1, 'verifyloginTest')
+data.setCell(2, 1, 'verifyShowPasswordLinkTest')
 data.setCell(2, 2, 'com.qa.hubspot.tests.LoginPageTest')
-data.setCell(2, 3, 5613);
+data.setCell(2, 3, 413);
 data.setCell(3, 0, 3)
-data.setCell(3, 1, 'verifyShowPasswordLinkTest')
+data.setCell(3, 1, 'verifyHidePasswordLinkTest')
 data.setCell(3, 2, 'com.qa.hubspot.tests.LoginPageTest')
-data.setCell(3, 3, 443);
+data.setCell(3, 3, 211);
 data.setCell(4, 0, 4)
-data.setCell(4, 1, 'verifyHidePasswordLinkTest')
+data.setCell(4, 1, 'verifySSOLinkTest')
 data.setCell(4, 2, 'com.qa.hubspot.tests.LoginPageTest')
-data.setCell(4, 3, 199);
+data.setCell(4, 3, 112);
 data.setCell(5, 0, 5)
-data.setCell(5, 1, 'verifyForgotPasswordLinkTest')
+data.setCell(5, 1, 'verifySignInWithGoogleLinkTest')
 data.setCell(5, 2, 'com.qa.hubspot.tests.LoginPageTest')
-data.setCell(5, 3, 84);
+data.setCell(5, 3, 109);
 data.setCell(6, 0, 6)
 data.setCell(6, 1, 'verifyDontHaveAccountLabelTest')
 data.setCell(6, 2, 'com.qa.hubspot.tests.LoginPageTest')
-data.setCell(6, 3, 78);
+data.setCell(6, 3, 96);
 data.setCell(7, 0, 7)
-data.setCell(7, 1, 'verifySSOLinkTest')
+data.setCell(7, 1, 'verifyPasswordIsMasked')
 data.setCell(7, 2, 'com.qa.hubspot.tests.LoginPageTest')
-data.setCell(7, 3, 69);
+data.setCell(7, 3, 94);
 data.setCell(8, 0, 8)
-data.setCell(8, 1, 'verifySignInWithGoogleLinkTest')
+data.setCell(8, 1, 'verifyForgotPasswordLinkTest')
 data.setCell(8, 2, 'com.qa.hubspot.tests.LoginPageTest')
-data.setCell(8, 3, 67);
+data.setCell(8, 3, 89);
 data.setCell(9, 0, 9)
 data.setCell(9, 1, 'verifyCopyRightInfoTest')
 data.setCell(9, 2, 'com.qa.hubspot.tests.LoginPageTest')
-data.setCell(9, 3, 62);
+data.setCell(9, 3, 70);
 data.setCell(10, 0, 10)
-data.setCell(10, 1, 'verifyPasswordIsMasked')
+data.setCell(10, 1, 'verifyLoginPageTitleTest')
 data.setCell(10, 2, 'com.qa.hubspot.tests.LoginPageTest')
-data.setCell(10, 3, 61);
+data.setCell(10, 3, 25);
 window.suiteTableData['Hubspot_App_Sanity_Test_Suite']= { tableData: data, tableDiv: 'times-div-Hubspot_App_Sanity_Test_Suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 32 seconds</span>
+              <span class="suite-total-time">Total running time: 12 seconds</span>
               <div id="times-div-Hubspot_App_Sanity_Test_Suite">
               </div> <!-- times-div-Hubspot_App_Sanity_Test_Suite -->
             </div> <!-- times-div -->
@@ -419,53 +389,51 @@ return data;
               </div> <!-- configuration-test before -->
               <div class="test-method">
                 <span class="method-name">verifySignUpLinkTest</span>
-                <span class="method-start">11632 ms</span>
+                <span class="method-start">11867 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
-                <img src="failed.png">
-                </img>
                 <span class="method-name">verifyLoginPageTitleTest</span>
-                <span class="method-start">17655 ms</span>
+                <span class="method-start">17112 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">verifyDontHaveAccountLabelTest</span>
-                <span class="method-start">38170 ms</span>
+                <span class="method-start">17143 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">verifyForgotPasswordLinkTest</span>
-                <span class="method-start">38252 ms</span>
+                <span class="method-start">17241 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">verifyPasswordIsMasked</span>
-                <span class="method-start">38340 ms</span>
+                <span class="method-start">17440 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">verifySignInWithGoogleLinkTest</span>
-                <span class="method-start">38402 ms</span>
+                <span class="method-start">17537 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">verifySSOLinkTest</span>
-                <span class="method-start">38472 ms</span>
+                <span class="method-start">17649 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">verifyShowPasswordLinkTest</span>
-                <span class="method-start">38547 ms</span>
+                <span class="method-start">17766 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">verifyHidePasswordLinkTest</span>
-                <span class="method-start">38994 ms</span>
+                <span class="method-start">18184 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">verifyCopyRightInfoTest</span>
-                <span class="method-start">39195 ms</span>
+                <span class="method-start">18397 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">verifyloginTest</span>
-                <span class="method-start">39260 ms</span>
+                <span class="method-start">18470 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-test after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">44885 ms</span>
+                <span class="method-start">24564 ms</span>
               </div> <!-- configuration-test after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

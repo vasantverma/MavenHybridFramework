@@ -2,16 +2,14 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="Hubspot App Sanity Test Suite">
 	<listeners>
-		<!-- <listener class-name="com.qa.hubspot.listeners.ExtentReportListener" 
-			/> -->
+		<!--  <listener class-name="com.qa.hubspot.listeners.ExtentReportListener" />  -->
 		<!-- <listener class-name="com.qa.hubspot.listeners.PDFListener" /> -->
-		<listener
-			class-name="com.qa.hubspot.listeners.TesultsListener" />
-
-
-
+		<listener class-name="com.qa.hubspot.listeners.TesultsListener" />
+		<listener class-name="com.qa.hubspot.listeners.TestAllureListener" />
+			
 	</listeners>
-	<test name="Hubspot Sanity Testcases- chrome">
+	
+	<test name="Hubspot Sanity Testcases">
 		<classes>
 			<class name="com.qa.hubspot.tests.LoginPageTest"></class>
 		</classes>

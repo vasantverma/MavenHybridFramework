@@ -72,18 +72,18 @@ public class BasePage {
 		try {
 			env = System.getProperty("env");
 			if (env == null) {
-				path = "./src/main/java/com/qa/hubspot/config/config.properties";
+				path = "./src/main/java/com/qa/hubspot/config/config.qa.properties";
 			} 
 			else {
 				switch (env) {
 				case "qa":
-					path = "./src/main/java/com/qa/hubspot/config/config.properties";
+					path = "./src/main/java/com/qa/hubspot/config/config.qa.properties";
 					break;
 				case "stg":
 					path = "./src/main/java/com/qa/hubspot/config/config.stg.properties";
 					break;
 				case "prod":
-					path = "./src/main/java/com/qa/hubspot/config/config.properties";
+					path = "./src/main/java/com/qa/hubspot/config/config.prod.properties";
 					break;
 				default:
 					System.out.println("no env is passed");
